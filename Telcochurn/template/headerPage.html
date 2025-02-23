@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Churn prediction usecase</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" >
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <!-- MAIN CSS -->
+
+
+{% block style%}
+<style>
+     body {margin: 0;}
+     
+     ul.topnav {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #333;
+       
+     }
+     
+     ul.topnav li {float: left;
+     
+     }
+     
+     ul.topnav li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+      
+      
+     }
+     
+     ul.topnav li a:hover:not(.active) {background-color: #111;
+          width : 200px;
+       height:200;
+       }
+     
+     ul.topnav li a.active {background-color: #4CAF50;
+     }
+     
+     ul.topnav li.right {float: right;}
+     
+     @media screen and (max-width: 600px) {
+       ul.topnav li.right, 
+       ul.topnav li {float: none;}
+     }
+     </style>
+
+{%endblock%}
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <div class="container"></div>
+     <!-- MENU -->
+     <header>
+     <section class="navbar navbar-default navbar-static-top" role="navigation" style="align-items: center;">
+          <div class="container">
+
+               <div class="collapse navbar-collapse">
+                  
+                    <ul class="topnav">
+                    <!-- lOGO TEXT HERE -->
+                    <li ><a class="active" ,href="index.html" > Churn détection</a></li>
+              
+
+               <!-- MENU LINKS -->
+               
+                    
+                         <li><a href="/" class="smoothScroll">Home</a></li>
+                         <li class="right"><a href="viewDataBase/" class="smoothScroll">View DataBase</a></li>
+                    </ul>
+               
+
+          </div>
+     </section>
+</header>
+
+
+
+     <!-- HOME -->
+
+
+<div class="container" >
+     {% block content%}
+
+     {% endblock %}
+    
+</div>
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright </p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   
+                                   <a href="#">Save</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     
+
+</body>
+</html>

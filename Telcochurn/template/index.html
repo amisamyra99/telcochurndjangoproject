@@ -1,0 +1,200 @@
+
+{% extends 'headerPage.html' %}
+
+{% block style%}
+<style>
+     body {margin: 0;}
+     
+     ul.topnav {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #333;
+     }
+     
+     ul.topnav li {float: left;}
+     
+     ul.topnav li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+     
+     ul.topnav li a:hover:not(.active) {background-color: #111;}
+     
+     ul.topnav li a.active {background-color: #4CAF50;}
+     
+     ul.topnav li.right {float: right;}
+     
+     @media screen and (max-width: 600px) {
+       ul.topnav li.right, 
+       ul.topnav li {float: none;}
+     }
+     input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 215px;
+}
+div#content div{
+  display : inline-block;
+  width : 48%;
+}
+div#content div.leftbox{
+  vertical-align : top ;
+}
+div#content div.rightbox{
+
+}
+     </style>
+{%endblock%}
+
+{% block content%}
+
+   
+
+    <h3>Please enter details:</h3>
+    <br>
+  
+  
+  
+ 
+ <form method="post" action="result">
+ {% csrf_token %}	
+ <div id="content">
+   <div class="leftbox">
+ <div class="col-md-4 col-sm-4"><label for="seniorCitizen">Senior Citizen:</label> </div> 
+ <SELECT id="seniorCitizen" name="seniorCitizen" LENGTH="3">
+   <option value="1">yes</option>
+   <option value="0">no</option>
+</SELECT>
+<br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Partner:</label> </div>
+   <SELECT name="partner" >
+   <option value="1">yes</option>
+   <option value="0">no</option>
+</SELECT>
+  <br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Dependents:</label> </div> 
+  <SELECT name="dependents" >
+   <option value="1">yes</option>
+   <option value="0">no</option>
+</SELECT><br><br>
+ <div class="col-md-4 col-sm-4"><label for="fname">Tenure Months:</label></div> 
+  <input type="number" id="fname" name="tenureMonths" min="-10"  step="any"><br><br>
+
+ <div class="col-md-4 col-sm-4"><label for="lname">Phone Service:</label> </div> 
+ <SELECT name="phoneService"  >
+   <option value="1">yes</option>
+   <option value="0">no</option>
+</SELECT><br><br>
+
+ <div class="col-md-4 col-sm-4"><label for="lname">Multiple Lines:</label> </div>
+ <SELECT name="multipleLines"  >
+   <option value="1">yes</option>
+   <option value="2">no phoneService</option>
+   <option value="0">no</option>
+</SELECT><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Internet Service:</label> </div>
+  <SELECT  name="internetService"  >
+   <option value="1">DSL</option>
+   <option value="2">FiberOptic</option>
+   <option value="0">no</option>
+</SELECT><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Online Security:</label> </div> 
+ <SELECT  name="onlineSecurity"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+ <br><br>
+  <div class="col-md-4 col-sm-4"><label for="lname">Online Backup :</label> </div> 
+<SELECT  name="onlineBackup"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+  <br><br>
+  <div class="col-md-4 col-sm-4"><label for="lname">Device Protection:</label> </div> 
+<SELECT  name="deviceProtection"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+  <br><br>
+   </div>
+   <div class="rightbox">
+  <div class="col-md-4 col-sm-4"><label for="lname">Tech Support:</label> </div>
+  <SELECT  name="techSupport"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+<br><br>
+  <div class="col-md-4 col-sm-4"><label for="lname">Streaming TV:</label> </div>
+  <SELECT  name="streamingTV"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+<br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Streaming Movies:</label> </div>
+ <SELECT  name="streamingMovies"   >
+   <option value="1">yes</option>
+   <option value="2">NoInternetService</option>
+   <option value="0">no</option>
+</SELECT>
+<br><br>
+
+  <div class="col-md-4 col-sm-4"><label for="lname">Contract:</label> </div> 
+   <SELECT  name="contract" >
+   <option value="1">OneYear</option>
+   <option value="2">TwoYearS</option>
+   <option value="0">Monthly</option>
+</SELECT><br><br>
+
+  <div class="col-md-4 col-sm-4"><label for="lname">Paperless Billing:</label> </div>
+    <SELECT name="paperlessBilling" >
+   <option value="1">yes</option>
+   <option value="0">no</option>
+</SELECT>
+  <br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Payment Method:</label> </div> 
+ <SELECT  name="paymentMethod"   >
+   <option value="1">Mailed</option>
+   <option value="2">ElectroniCheck</option>
+   <option value="3">BankTransfer</option>
+</SELECT><br><br>
+  <div class="col-md-4 col-sm-4"><label for="lname">Monthly Charges:</label> </div> 
+  <input type="number" name="monthlyCharges" min="-10"   step="any"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Total Charges:</label> </div>
+  <input type="number" name="totalCharges"  min="-10"  step="any"><br><br>
+  
+ 
+ 
+  <br>
+ <input type="submit" value="Submit" ><br><br>
+</div>
+</div>
+ <h1>This customer is  {{result}}</h1><br><br>
+
+ <h3>If the response is good. Do you want to save it in DB?</h3><br><br>
+</div>
+
+ 
+
+ 
+
+</form>
+<br>
+{% endblock %}
+
+
+

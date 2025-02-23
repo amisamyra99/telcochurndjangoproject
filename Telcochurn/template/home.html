@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Churn prediction usecase</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" >
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" >
+
+     <!-- MAIN CSS -->
+     <style  type="text/css">
+          div{
+         color: 'white'
+          }
+          h1
+          {
+               color: white;
+               font-family:arial,sans-serif;
+               font-size: 60px;
+               font-weight: bold;
+               margin-top: 200px;
+          }
+          body{
+               background-image:url("{%static '/TelcoChurn/images/2-things-that-will-reduce-your-churn.png'%}");
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               background-size: cover;
+          }
+          input[type=submit]
+          {
+               background-color: #4dc3ff;
+               border: 2px;
+               color: white;
+               padding: 16px 32px;
+               cursor:pointer;
+               margin-top: 15px;
+
+          }
+     </style>
+
+</head>
+<body> 
+     <div align="center">
+        <h1>
+             Welcome to churn prediction system
+        </h1> 
+        <form action="predictgbc">
+             <input type="submit" value="Lets get started">
+        </form> 
+     </div>
+
+</body>
+</html>
